@@ -7,14 +7,79 @@
   "img": "./api/produtos/smartphone/smartphone-foto.jpg",
   "reviews": [
     {
-      "nome": "Rogério",
+      "nome": "Giovanni",
       "estrelas": 5,
-      "descricao": "Gostei muito do produto, atendeu todas as minhas necessidades."
+      "descricao": "Produto excelente, superou minhas expectativas em todos os aspectos!"
     },
     {
-      "nome": "Nathália",
+      "nome": "Ana Paula",
       "estrelas": 4,
-      "descricao": "Gostei, mas o preço poderia ser melhor."
+      "descricao": "Bom produto, atendeu às minhas necessidades."
+    },
+    {
+      "nome": "Rafaela",
+      "estrelas": 3,
+      "descricao": "Produto razoável, mas esperava um pouco mais de qualidade."
+    },
+    {
+      "nome": "João",
+      "estrelas": 2,
+      "descricao": "Decepcionado, produto não funcionou como anunciado."
+    },
+    {
+      "nome": "Pedro",
+      "estrelas": 5,
+      "descricao": "Produto de alta qualidade, entrega rápida e sem problemas."
+    },
+    {
+      "nome": "Juliana",
+      "estrelas": 3,
+      "descricao": "Produto ok, mas a embalagem chegou um pouco danificada."
+    },
+    {
+      "nome": "Fernando",
+      "estrelas": 4,
+      "descricao": "Satisfeito com a compra, recomendo!"
+    },
+    {
+      "nome": "Camila",
+      "estrelas": 5,
+      "descricao": "Produto incrível, superou todas as minhas expectativas!"
+    },
+    {
+      "nome": "Lucas",
+      "estrelas": 2,
+      "descricao": "Insatisfeito, produto não correspondeu ao que foi prometido."
+    },
+    {
+      "nome": "Isabela",
+      "estrelas": 4,
+      "descricao": "Produto de boa qualidade, mas o preço poderia ser um pouco mais acessível."
+    },
+    {
+      "nome": "Marcelo",
+      "estrelas": 5,
+      "descricao": "Melhor produto que já adquiri, muito satisfeito com a compra!"
+    },
+    {
+      "nome": "Mariana",
+      "estrelas": 3,
+      "descricao": "Produto regular, esperava mais considerando o preço."
+    },
+    {
+      "nome": "Thiago",
+      "estrelas": 4,
+      "descricao": "Boa experiência de compra, produto conforme descrito."
+    },
+    {
+      "nome": "Carolina",
+      "estrelas": 2,
+      "descricao": "Desapontada, produto chegou com defeito."
+    },
+    {
+      "nome": "Felipe",
+      "estrelas": 5,
+      "descricao": "Recomendo a todos, produto de excelente qualidade!"
     }
   ]
 }

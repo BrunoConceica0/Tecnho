@@ -7,14 +7,79 @@
   "img": "./api/produtos/speaker/speaker-foto.jpg",
   "reviews": [
     {
-      "nome": "Rogério",
-      "estrelas": 5,
-      "descricao": "Gostei muito do produto, atendeu todas as minhas necessidades."
+      "nome": "Roberto",
+      "estrelas": 4,
+      "descricao": "Produto de qualidade, atendeu às minhas expectativas."
     },
     {
-      "nome": "Nathália",
+      "nome": "Viviane",
+      "estrelas": 3,
+      "descricao": "Razoável, mas esperava mais considerando o preço."
+    },
+    {
+      "nome": "Alexandre",
+      "estrelas": 2,
+      "descricao": "Decepcionado, produto chegou danificado."
+    },
+    {
+      "nome": "Cristiane",
+      "estrelas": 5,
+      "descricao": "Produto excelente, recomendo a todos!"
+    },
+    {
+      "nome": "Erick",
+      "estrelas": 3,
+      "descricao": "Mais ou menos, poderia ser melhor."
+    },
+    {
+      "nome": "Márcia",
       "estrelas": 4,
-      "descricao": "Gostei, mas o preço poderia ser melhor."
+      "descricao": "Satisfeita com a compra, produto de boa qualidade."
+    },
+    {
+      "nome": "Raphael",
+      "estrelas": 5,
+      "descricao": "Produto incrível, superou minhas expectativas!"
+    },
+    {
+      "nome": "Daniela",
+      "estrelas": 2,
+      "descricao": "Não recomendo, produto não durou muito."
+    },
+    {
+      "nome": "Vinícius",
+      "estrelas": 4,
+      "descricao": "Boa compra, produto chegou conforme o esperado."
+    },
+    {
+      "nome": "Priscila",
+      "estrelas": 5,
+      "descricao": "Melhor produto que já adquiri, estou muito satisfeita!"
+    },
+    {
+      "nome": "Lucas",
+      "estrelas": 3,
+      "descricao": "Produto razoável, mas esperava mais."
+    },
+    {
+      "nome": "Amanda",
+      "estrelas": 4,
+      "descricao": "Produto de boa qualidade, recomendo!"
+    },
+    {
+      "nome": "Gustavo",
+      "estrelas": 2,
+      "descricao": "Desapontado, produto não atendeu minhas expectativas."
+    },
+    {
+      "nome": "Tatiana",
+      "estrelas": 5,
+      "descricao": "Excelente produto, entrega rápida e eficiente!"
+    },
+    {
+      "nome": "Paulo",
+      "estrelas": 4,
+      "descricao": "Satisfeito com a compra, produto conforme descrito."
     }
   ]
 }

@@ -7,14 +7,79 @@
   "img": "./api/produtos/notebook/notebook-foto.jpg",
   "reviews": [
     {
-      "nome": "Fábio",
+      "nome": "Mariana",
       "estrelas": 5,
-      "descricao": "Gostei muito do produto, atendeu todas as minhas necessidades"
+      "descricao": "Produto excelente, superou minhas expectativas!"
     },
     {
-      "nome": "Fábio",
+      "nome": "Renato",
+      "estrelas": 4,
+      "descricao": "Bom produto, entrega rápida e sem problemas."
+    },
+    {
+      "nome": "Tatiane",
+      "estrelas": 3,
+      "descricao": "Produto razoável, mas esperava mais qualidade pelo preço."
+    },
+    {
+      "nome": "Felipe",
+      "estrelas": 2,
+      "descricao": "Desapontado com a qualidade, não correspondeu às descrições."
+    },
+    {
+      "nome": "Carolina",
       "estrelas": 5,
-      "descricao": "Gostei muito do produto, atendeu todas as minhas necessidades"
+      "descricao": "Produto incrível, recomendo a todos!"
+    },
+    {
+      "nome": "André",
+      "estrelas": 3,
+      "descricao": "Produto atendeu às necessidades, mas poderia ser mais durável."
+    },
+    {
+      "nome": "Luiza",
+      "estrelas": 4,
+      "descricao": "Satisfeita com a compra, bom custo-benefício."
+    },
+    {
+      "nome": "Guilherme",
+      "estrelas": 5,
+      "descricao": "Melhor produto que já adquiri, muito satisfeito!"
+    },
+    {
+      "nome": "Fernando",
+      "estrelas": 2,
+      "descricao": "Decepcionado, produto não funcionou como esperado."
+    },
+    {
+      "nome": "Priscila",
+      "estrelas": 4,
+      "descricao": "Produto de boa qualidade, entrega dentro do prazo."
+    },
+    {
+      "nome": "Bruno",
+      "estrelas": 5,
+      "descricao": "Excelente produto, recomendo a todos os meus amigos!"
+    },
+    {
+      "nome": "Vanessa",
+      "estrelas": 3,
+      "descricao": "Produto ok, mas esperava mais considerando o preço."
+    },
+    {
+      "nome": "Rodrigo",
+      "estrelas": 4,
+      "descricao": "Boa compra, produto conforme anunciado."
+    },
+    {
+      "nome": "Aline",
+      "estrelas": 2,
+      "descricao": "Não gostei, não atendeu minhas expectativas."
+    },
+    {
+      "nome": "Luciana",
+      "estrelas": 5,
+      "descricao": "Produto de alta qualidade, estou muito satisfeita!"
     }
   ]
 }
