@@ -65,6 +65,12 @@
 .modal_btn:active {
   background: #080808;
 }
+.modal_btn.esgotado {
+  background: #dadad6;
+  color: #131212;
+  font-weight: bold;
+  cursor: initial;
+}
 .modal_dados {
   grid-column: 2;
   max-width: 600px;

@@ -14,6 +14,32 @@
 
 <body>
   <div id="app">
+
+    <header class="header">
+      <img class="logo" src="./assets/techno.svg" alt="Techno">
+
+      <div class="carrinho_menu">{{carrinhoTotal | formatarValorReal}} | {{carrinho.length}} </div>
+      <ul>
+        <li v-for="(item, index) in carrinho">
+          <p>{{item.nome}}</p>
+          <p>{{item.preco | formatarValorReal}}</p>
+          <button @click="removeItem(index)">X</button>
+        </li>
+      </ul>
+
+    </header>
+
+    <section class="produtos">
+      <!-- o @click ao click nele, vai puxar a função do fetch do produto, pegado o valor id para somente falar com único produto específico 'fetchProduto(item.id)' é importante lembra que tem que ter um forEach dos item de lista, se não, não faz sentido.-->
+      <div class="produto" v-for="item in produtos" @click="abrirModal(item.id)" :key="item.id">
+        <img class="produto_img" :src="item.img" :alt="item.nome">
+        <div class="produto_info">
+          <span class="produto_preco">{{item.preco | formatarValorReal}}</span>
+          <h2 class="produto_subtitulo">{{item.nome}}</h2>
+        </div>
+      </div>
+    </section>
+
     <section class="modal" v-if="produto" @click="fecharModal">
       <div class="modal_container">
         <div class="modal_img">
@@ -22,10 +48,12 @@
         <div class="modal_dados">
           <!-- botão fecha modal -->
           <button class="modal_fechar" v-if="produto" @click="produto=false">X</button>
-          <span class="modal_preco">{{produto.preco}}</span>
+          <span class="modal_preco">{{produto.preco |formatarValorReal}}</span>
           <h2 class="modal_titulo">{{produto.nome}}</h2>
           <p>{{produto.descricao}}</p>
-          <button class="modal_btn">Adicionar item</button>
+          <button class="modal_btn" @click="adicionarItem" v-if="produto.estoque > 0">Adicionar item</button>
+          <!-- é criado um segundo botão do mesmo, por tanto ele só aparecera um condição, chegar ao limite do estoque, támbem ele é desbilitado com disabled -->
+          <button class="modal_btn esgotado" @click="adicionarItem" v-else disabled>Produto Esgotado!</button>
         </div>
         <div class="modal_aliacao">
           <h2 class="avalicoes_subtitulo">Avaliações</h2>
@@ -38,17 +66,10 @@
         </div>
       </div>
     </section>
-
-    <section class="produtos">
-      <!-- o @click ao click nele, vai puxar a função do fetch do produto, pegado o valor id para somente falar com único produto específico 'fetchProduto(item.id)' é importante lembra que tem que ter um forEach dos item de lista, se não, não faz sentido.-->
-      <div class="produto" v-for="item in produtos" @click="abrirModal(item.id)" :key="item.id">
-        <img class="produto_img" :src="item.img" :alt="item.nome">
-        <div class="produto_info">
-          <span class="produto_preco">{{item.preco | formatarValorReal}}</span>
-          <h2 class="produto_subtitulo">{{item.nome}}</h2>
-        </div>
-      </div>
-    </section>
+    <!-- para fazer aparecer a mensagem de alerta tem que usar o v-bind com o nome da classe e o objeto -->
+    <div class="alerta" :class="{active: ativarAlerta}">
+      <p class="alerta_mensagem">{{mensagemAlerta}}</p>
+    </div>
   </div>
 
   <script src="./app.js"></script>

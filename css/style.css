@@ -2,3 +2,9 @@
 
 /* Modal */
 @import url("./modal.css");
+
+/* Carrinho */
+@import url("./header.css");
+/* Mensagem de alerta */
+
+@import url("./alerta.css");
