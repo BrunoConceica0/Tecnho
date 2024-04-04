@@ -90,9 +90,23 @@ const vm = new Vue({
         this.ativarAlerta = false;
       }, 3000);
     },
+    //É pegado o hash da página e fazendo um condição de hash. vai chamar fetchProduto e colocar o hash no paramentro, tem que retira o #, se não, não vai funcionar e támbem tem que colocar a função no created, vai iniciar junto com site.
+    router() {
+      const hash = document.location.hash;
+      if (hash) {
+        this.fetchProduto(hash.replace("#", ""));
+      }
+    },
   },
-  // Observado os eventos do carrinho, o wacth vai observar o dados do localStorage e vai aramzena os dados para fazer um ação. usando o JSON.strigify tirando a valor que vai estar em string para resposta em json.
   watch: {
+    // observar o evento do produto, quando estiver dentro do conteúdo, mudara o titulo da página pelo nome do produto e se não ouver, vai para o nome da página orinal.
+    //támbem vai adicionar o history.pushState para remonear o nome do diretorio. colocando um # no começa com o id do produto, para finalzar é criado um função de router para pode compartilha o item
+    produto() {
+      document.title = this.produto.nome || "Techno";
+      const hash = this.produto.id || "";
+      history.pushState(null, null, `#${hash}`);
+    },
+    // Observado os eventos do carrinho, o wacth vai observar o dados do localStorage e vai aramzena os dados para fazer um ação. usando o JSON.strigify tirando a valor que vai estar em string para resposta em json.
     carrinho() {
       window.localStorage.carrinho = JSON.stringify(this.carrinho);
     },
@@ -100,6 +114,7 @@ const vm = new Vue({
   // mostra os dados e valor em precisa um de evento antes, ele já é populado quado iniciamos a site
   created() {
     this.fetchProdutos();
+    this.router();
     this.checarLocalStorage();
   },
 });
