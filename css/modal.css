@@ -20,16 +20,6 @@
   width: 100%;
   padding: 80px;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate3d(50px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 .modal_container {
   position: relative;
   background: linear-gradient(to right, transparent 250px, white 250px);
@@ -56,10 +46,8 @@
   font-family: "Noto Serif";
   margin-top: 80px;
   background: #000;
-  cursor: pointer;
   color: white;
   padding: 10px 25px;
-  border: none;
   font-size: 1em;
 }
 .modal_btn:active {

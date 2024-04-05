@@ -1,0 +1,103 @@
+.carrinho_modal::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.carrinho_modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: none;
+}
+.carrinho_modal.active {
+  display: block;
+}
+.carrinho_container {
+  position: relative;
+  margin: 80px auto;
+  background: #fff;
+  padding: 40px;
+  max-width: 800px;
+  animation: fadeInDown 0.3s forwards;
+  position: relative;
+}
+.carrinho_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  align-items: center;
+}
+.carrinho_titulo {
+  margin-bottom: 10px;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+}
+.carrinho_remove {
+  font-size: 0.875em;
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin-left: 7px;
+  font-weight: bold;
+  font-family: "Noto Serif";
+  text-transform: uppercase;
+  color: rgb(15, 15, 15);
+}
+.carrinho_remove:hover {
+  background: #e6e6e6;
+  color: black;
+}
+.carrinho_remove:active {
+  color: #f0f0f0;
+  background: black;
+}
+.carrinho_preco {
+  text-align: right;
+}
+.carrinho_total {
+  text-align: end;
+  border-bottom: 2px solid black;
+  padding: 10px 120px 0 107px;
+  margin-bottom: 20px;
+}
+.carrinho_finalizar {
+  display: block;
+  margin-left: auto;
+  background: #111114;
+  color: #e6e6e6;
+  font-size: 1em;
+  padding: 10px 25px;
+  font-family: "Noto Serif";
+}
+.carrinho_finalizar:hover {
+  color: #fff;
+  background: #000;
+}
+.carrinho_finalizar:active {
+  background: #424141;
+  color: #e6e6e6;
+}
+.carrinho_fechar {
+  border-radius: 50%;
+  background: #f0f0f0;
+  border: 2px solid black;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1em;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.carrinho_fechar:active {
+  background: black;
+  color: #f0f0f0;
+}

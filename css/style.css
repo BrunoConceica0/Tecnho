@@ -8,3 +8,10 @@
 /* Mensagem de alerta */
 
 @import url("./alerta.css");
+
+/* carrinho */
+
+@import url("./carrinho.css");
+
+/* Componentes */
+@import url("./componentes.css");

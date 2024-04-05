@@ -6,6 +6,7 @@ const vm = new Vue({
     carrinho: [],
     mensagemAlerta: "",
     ativarAlerta: false,
+    carrinhoAtivo: false,
   },
   filters: {
     formatarValorReal(valor) {
@@ -58,6 +59,9 @@ const vm = new Vue({
     fecharModal({ target, currentTarget }) {
       if (target === currentTarget) this.produto = false;
     },
+    clickForaCarrinho({ target, currentTarget }) {
+      if (target === currentTarget) this.carrinhoAtivo = false;
+    },
     //Para adiocinar os itens selecionado pelo usuário no carrinho.
     //Primeiro passo: cada item tem o seu estoque, no momento é clicando para adicionar ao carrinho tem que diminuir o seu estoque.
     //Segundo passo: tem que colocar os item selecionados no carrinho, crie um novo objeto com array de lista "carrinho:[]", em sequencia pegue o id, nome e preco da lista de produto pode fazer destruturado, e adiciona no carrinho com metodo de push()
@@ -88,7 +92,7 @@ const vm = new Vue({
       this.ativarAlerta = true;
       setTimeout(() => {
         this.ativarAlerta = false;
-      }, 3000);
+      }, 1000);
     },
     //É pegado o hash da página e fazendo um condição de hash. vai chamar fetchProduto e colocar o hash no paramentro, tem que retira o #, se não, não vai funcionar e támbem tem que colocar a função no created, vai iniciar junto com site.
     router() {
