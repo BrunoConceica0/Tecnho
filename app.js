@@ -94,6 +94,14 @@ const vm = new Vue({
         this.ativarAlerta = false;
       }, 1000);
     },
+    //
+    comparaEstoque() {
+      const itens = this.carrinho.filter(({ id }) => {
+        if (id === this.produto.id) return true;
+      });
+      this.produto.estoque -= itens.length;
+    },
+
     //É pegado o hash da página e fazendo um condição de hash. vai chamar fetchProduto e colocar o hash no paramentro, tem que retira o #, se não, não vai funcionar e támbem tem que colocar a função no created, vai iniciar junto com site.
     router() {
       const hash = document.location.hash;
@@ -109,6 +117,9 @@ const vm = new Vue({
       document.title = this.produto.nome || "Techno";
       const hash = this.produto.id || "";
       history.pushState(null, null, `#${hash}`);
+      if (this.produto) {
+        this.comparaEstoque();
+      }
     },
     // Observado os eventos do carrinho, o wacth vai observar o dados do localStorage e vai aramzena os dados para fazer um ação. usando o JSON.strigify tirando a valor que vai estar em string para resposta em json.
     carrinho() {
