@@ -94,12 +94,17 @@ const vm = new Vue({
         this.ativarAlerta = false;
       }, 1000);
     },
-    //
+    //Ao adicionar o item, remove a unidade do estoque
+    // tem que chamar o objeto do carrinho e colocar para filtar somento o "id", assim passando arrow funcion, para cada item selecionado, faz uma comparação se o item.id é igual ao produto.id, o produto carrega o estoque, então, coloque este método em um const itens,
+    //No final chamar o produtos.estoque subtrair com itens.length, assim quando adcionar o item no carrinho, ele removerá o item do estoque.
+    //A função sozinho não vai fazer nada, tem que cria outra função no watch e conferir se o this.produto existir, se ele existir de this.comparaEstoque, somente assim ele funcionara
     comparaEstoque() {
-      const itens = this.carrinho.filter(({ id }) => {
-        if (id === this.produto.id) return true;
+      const itens = this.carrinho.filter((item) => {
+        if (item.id === this.produto.id) {
+          return true;
+        }
       });
-      this.produto.estoque -= itens.length;
+      this.produto.estoque = this.produto.estoque - itens.length;
     },
 
     //É pegado o hash da página e fazendo um condição de hash. vai chamar fetchProduto e colocar o hash no paramentro, tem que retira o #, se não, não vai funcionar e támbem tem que colocar a função no created, vai iniciar junto com site.

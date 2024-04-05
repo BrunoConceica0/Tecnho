@@ -15,3 +15,6 @@
 
 /* Componentes */
 @import url("./componentes.css");
+
+/* Responsivo */
+@import url("./responsivo.css");
