@@ -45,7 +45,7 @@
           <h2 class="modal_titulo">{{produto.nome}}</h2>
           <p>{{produto.descricao}}</p>
           <button class="modal_btn" @click="adicionarItem" v-if="produto.estoque > 0">Adicionar item</button>
-          <!-- é criado um segundo botão do mesmo, por tanto ele só aparecera um condição, chegar ao limite do estoque, támbem ele é desbilitado com disabled -->
+          <!-- é criado um segundo botão do mesmo, por tanto ele só aparecera um condição, chegar ao limite do estoque, tám<bem ele é desbilitado com disabled -->
           <button class="modal_btn esgotado" @click="adicionarItem" v-else disabled>Produto Esgotado!</button>
         </div>
         <div class="modal_aliacao">

@@ -1,5 +1,13 @@
 .modal {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 80px;
 }
 .modal::before {
   content: "";
@@ -10,16 +18,7 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
 }
-.modal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 80px;
-}
+
 .modal_container {
   position: relative;
   background: linear-gradient(to right, transparent 250px, white 250px);

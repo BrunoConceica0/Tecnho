@@ -18,7 +18,7 @@ const vm = new Vue({
   },
   computed: {
     // Para funcionar tem que colocar o carrinhoTotal no template com algum tag sem precisa de colocar a (), saira o valor total
-    // 1* passo colocar um let totol = 0, return total, tem que conferir se existe o item no carrinho. se existir, tem que fazer um interração para cada item no carrinho usado forEach, em sequêmcia coloque total+=item.preco.
+    // 1* passo colocar um let totol = 0, return total, tem que conferir se existe o item no carrinho. se existir, tem que fazer um interração para cada item no carrinho usado forEach, em sequência coloque total+=item.preco.
     carrinhoTotal() {
       let total = 0;
       if (this.carrinho.length) {
